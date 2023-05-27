@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@font-face {
+    font-family: "Bronzier";
+    src: url(../fonts/Bronzier-Medium.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color0: #8D46EA;
+    --color1: #6300E5;
+    --color2: #4D00B3;
+    --color3: #3E1F66;
+    --color4: #2C0066;
+
+    --fontTitle: "Ubuntu";
+    --fontNormal: "Poppins";
+    --fontLogo: Bronzier;
+}
+
+body{
+    background-color: var(--color3);
+    color: white;
+}
+
+.header{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.header a{
+    text-decoration: none;
+}
+
+.hamburguer{
+    display: flex;
+    flex-direction: column;
+}
+
+#line{
+    width: 10px;
+    margin: 1px;
+    border: 1px solid var(--color4);
+}
+
+.logo{
+    font-family: var(--fontLogo);
+    font-size: 1.3em;
+}
+
+.navLinks{
+    font-weight: bold;
+    display: flex;
+    gap: 8px;
+    font-family: var(--fontTitle);
+    transition: 3s;
+}
+
+.navLinks a:hover{
+    border-bottom:1px solid #8D46EA;
+}
+
+.articlePurple{
+    animation: toRight 1s;
+    font-family: var(--fontTitle);
+    width: 98%;
+    background-color: var(--color0);
+    border-radius: 0px 20px 20px 0px;
+    padding: 10px;
+}
+
+.articleBlack{
+    animation: toLeft 1s;
+    font-family: var(--fontTitle);
+    margin-left: 2%;
+    width: 100%;
+    background-color:black;
+    border-radius: 20px 0px 0px 20px;
+    padding: 10px 20px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-around;
+}
+
+.secondCard img{
+    width: 100px;
+}
+
+
+
+@keyframes toRight {
+    from{
+        width: 50%;
+        background-color: transparent;
+    }
+
+    50%{
+        transition: 2s;
+    }
+
+    100%{
+        background-color: var(--color0);
+        width: 98%;
+    }
+}
+
+@keyframes toLeft {
+    from{
+        width: -50%;
+        background-color: transparent;
+    }
+
+    100%{
+      background-color: black;
+      margin-left: 2%;  
+      width: -100%;
+    }
+}
+
