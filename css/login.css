@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
-
+@font-face {
+    font-family: "Bronzier";
+    src: url(../fonts/Bronzier-Medium.ttf);
+}
 *{
     padding: 0;
     margin: 0;
@@ -16,10 +19,10 @@
 
     --fontTitle: "Ubuntu";
     --fontNormal: "Poppins";
+    --fontLogo: Bronzier;
 }
 
 header{
-    padding: 10px;
     display: none;
 }
 
@@ -41,9 +44,13 @@ a{
 }
 
 .title h1{
-    color: var(--color4);
-    font:var(--fontTitle);
+    color: var(--color0);
+    font-family: var(--fontLogo);
     font-size: 3em;
+}
+
+#initialLetter{
+    color: var(--color4);
 }
 
 form{
@@ -107,6 +114,7 @@ footer a{
         display: flex;
         background-color: var(--color2);
         border-bottom: 1px solid #666;
+        padding: 5px;
     }
 
     .headerLinks{
@@ -127,24 +135,24 @@ footer a{
     }
 
     .main{
-        background-image: linear-gradient(to top, var(--color0), var(--color1));
         gap: 0;
-        height: 95vh;
+        height: 96vh;
     }
 
     .form{
         display: grid;
         justify-content: center;
         width: 50%;
-        height: 55%;
+        height: 50%;
     }
 
     .form form{
+        box-shadow: 1px 1px 3px #3e1f6695;
         background-color: white;
         padding: 10px;
         border-radius: 15px;
         width: 100%;
-        height: 43%;
+        height: 55%;
     }
 
     .btnSection{
@@ -158,6 +166,7 @@ footer a{
     .img{
         display: none;
     }
+
 }
 
 @media (max-height: 950px){

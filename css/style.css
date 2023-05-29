@@ -28,6 +28,8 @@ body{
     color: white;
 }
 
+/* --INIT HEADER-- */
+
 .header{
     width: 100%;
     background-color: white;
@@ -35,7 +37,7 @@ body{
     justify-content: space-between;
     padding: 2%;
     align-items: center;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
 }
 
 .header a{
@@ -55,7 +57,15 @@ body{
 
 .logo{
     font-family: var(--fontLogo);
-    font-size: 1.3em;
+    font-size: 1.4em;
+}
+
+.logo a{
+    color: var(--color1);
+}
+
+#initialLetter{
+    color: var(--color2);
 }
 
 .navLinks{
@@ -63,37 +73,53 @@ body{
     display: flex;
     gap: 8px;
     font-family: var(--fontTitle);
-    transition: 3s;
+    transition: 1s;
 }
 
 .navLinks a:hover{
-    border-bottom:1px solid #8D46EA;
+    border-bottom:1px solid var(--color0);
 }
+
+/* --END HEADER-- */
+
+/* --INIT MAIN-- */
 
 .articlePurple{
     animation: toRight 2s;
-    font-family: var(--fontTitle);
+    font-family: var(--fontNormal);
     width: 98%;
     background-color: var(--color0);
     border-radius: 0px 20px 20px 0px;
     padding: 10px;
     font-weight: bold;
+    text-transform:capitalize;
+}
+
+.articlePurple h1{
+    color: var(--color2);
 }
 
 .articleBlack{
+    text-transform:capitalize;
     font-weight: bold;
     animation: toLeft 2s;
-    font-family: var(--fontTitle);
+    font-family: var(--fontNormal);
     margin-left: 1%;
     width: 99%;
     background-color:black;
     border-radius: 20px 0px 0px 20px;
-    padding: 10px 20px 10px 10px;
+    padding: 10px 25px 10px 15px;
     display: grid;
     grid-template-areas: 
     'textCard imgCard'
     'createCard createCard';
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.articleBlack a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
 }
 
 #textCard{
@@ -113,30 +139,74 @@ body{
     width: 80px;
 }
 
-.sectionProducts{
+.sectionAllAges{
     margin-top: 2%;
     padding-left: 2%;
     display: flex;
     align-items: end;
-    animation: img 3s;
+    animation: img 2s;
 }
 
-.sectionProducts img{
+.sectionAllAges img{
     width: 98%;
     border-radius: 20px;
 }
 
-.sectionProducts p{
+.sectionAllAges p{
     margin-left: 1%;
     border-radius: 20px;
     text-indent: 10px;
     width: 50%;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     font-family: var(--fontNormal);
     position: absolute;
-    background-image: linear-gradient(to right ,#00000054, transparent);
+    background-image: linear-gradient(to right , rgba(0, 0, 0, 0.318), transparent);
+    text-transform:capitalize;
 }
+
+.sectionAllAges a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.sectionBuyOnline{
+    margin-top: 2%;
+    background-color: black;
+    padding: 2%;
+}
+
+.buyOnline{
+    display: flex;
+    align-items: start;
+}
+
+.buyOnline img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+.buyOnline p{
+    position: absolute;
+    text-indent: 15px;
+    background-color: rgba(255, 255, 255, 0.819);
+    font-size: 1.0em;
+    font-weight: bolder;
+    font-family: var(--fontNormal);
+    color: black;
+    border-radius: 10px;
+    width: 55%;
+    text-transform:capitalize;
+}
+
+#textPurple{
+    color: var(--color0);
+}
+
+/* --END MAIN-- */
+
+/* --ANIMATIONS-- */
 
 @keyframes toRight {
     from{
@@ -168,15 +238,19 @@ body{
 
 @keyframes img {
     from{
-        display: run-in;
+        display: none;
     }
-    25%{
+    0%{
         width: 25%;
-    }
-    50%{
-        width: 50%;
     }
     100%{
         width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .sectionProducts p{
+        width: 60%;
+        font-size: 1.1em;
     }
 }
