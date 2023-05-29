@@ -71,33 +71,72 @@ body{
 }
 
 .articlePurple{
-    animation: toRight 1s;
+    animation: toRight 2s;
     font-family: var(--fontTitle);
     width: 98%;
     background-color: var(--color0);
     border-radius: 0px 20px 20px 0px;
     padding: 10px;
+    font-weight: bold;
 }
 
 .articleBlack{
-    animation: toLeft 1s;
+    font-weight: bold;
+    animation: toLeft 2s;
     font-family: var(--fontTitle);
-    margin-left: 2%;
-    width: 100%;
+    margin-left: 1%;
+    width: 99%;
     background-color:black;
     border-radius: 20px 0px 0px 20px;
     padding: 10px 20px 10px 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: end;
+    display: grid;
+    grid-template-areas: 
+    'textCard imgCard'
+    'createCard createCard';
     justify-content: space-around;
 }
 
-.secondCard img{
-    width: 100px;
+#textCard{
+    grid-area: textCard;
 }
 
+#imgCard{
+    grid-area: imgCard;
+}
 
+#createCard{
+    grid-area: createCard;
+    text-align: center;
+}
+
+.secondCard img{
+    width: 80px;
+}
+
+.sectionProducts{
+    margin-top: 2%;
+    padding-left: 2%;
+    display: flex;
+    align-items: end;
+    animation: img 3s;
+}
+
+.sectionProducts img{
+    width: 98%;
+    border-radius: 20px;
+}
+
+.sectionProducts p{
+    margin-left: 1%;
+    border-radius: 20px;
+    text-indent: 10px;
+    width: 50%;
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: var(--fontNormal);
+    position: absolute;
+    background-image: linear-gradient(to right ,#00000054, transparent);
+}
 
 @keyframes toRight {
     from{
@@ -117,14 +156,27 @@ body{
 
 @keyframes toLeft {
     from{
-        width: -50%;
+        width: 60%;
         background-color: transparent;
     }
 
     100%{
-      background-color: black;
-      margin-left: 2%;  
-      width: -100%;
+        background-color: black;
+        width: -100%;
     }
 }
 
+@keyframes img {
+    from{
+        display: run-in;
+    }
+    25%{
+        width: 25%;
+    }
+    50%{
+        width: 50%;
+    }
+    100%{
+        width: 100%;
+    }
+}
