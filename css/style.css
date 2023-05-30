@@ -200,6 +200,7 @@ body{
 }
 
 .SectionInvestiments{
+    animation: img 2s;
     margin-top: 2%;
     padding: 2%;
 }
