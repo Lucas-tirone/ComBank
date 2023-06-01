@@ -136,7 +136,7 @@ footer a{
 
     .main{
         gap: 0;
-        height: 96vh;
+        height: 95.9vh;
     }
 
     .form{
@@ -157,6 +157,7 @@ footer a{
 
     .btnSection{
         margin-top: 5%;
+        justify-content: center;
     }
 
     .btn:hover{
@@ -173,6 +174,10 @@ footer a{
     .btnSection{
         margin-top: 10%;
     }
+
+    .form form{
+        height: 50%;
+    }
 }
 
 @media (min-height: 800px){
@@ -181,6 +186,12 @@ footer a{
     }
 
     .form form{
-        height: 50%;
+        height: 55%;
+    }
+}
+
+@media (max-height: 700px){
+    .form form{
+        height: 80%;
     }
 }
