@@ -30,7 +30,7 @@ body{
 
 /* --INIT HEADER-- */
 
-.header{
+header{
     width: 100%;
     background-color: white;
     display: flex;
@@ -40,7 +40,7 @@ body{
     margin-bottom: 2%;
 }
 
-.header a{
+header a{
     text-decoration: none;
 }
 
@@ -99,12 +99,16 @@ body{
     color: var(--color2);
 }
 
+#imgCardPurple{
+    display: none;
+}
+
 .articleBlack{
     text-transform:capitalize;
     font-weight: bold;
     animation: toLeft 2s;
     font-family: var(--fontNormal);
-    margin-left: 1%;
+    margin-left: 2%;
     width: 99%;
     background-color:black;
     border-radius: 20px 0px 0px 20px;
@@ -135,8 +139,12 @@ body{
     text-align: center;
 }
 
-.secondCard img{
+.articleBlack img{
     width: 80px;
+}
+
+.imgCardDesktop{
+    display: none;
 }
 
 .sectionAllAges{
@@ -233,6 +241,31 @@ body{
 
 /* --END MAIN-- */
 
+/* --FOOTER-- */
+
+footer{
+    background-color: #2C0066;
+    color: white;
+    font-family: var(--fontNormal); 
+    font-size: small;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.footerText{
+    padding: 10px;
+    width: 80%;
+    display: grid;
+    
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
 /* --ANIMATIONS-- */
 
 @keyframes toRight {
@@ -275,9 +308,85 @@ body{
     }
 }
 
-@media (max-width: 375px) {
-    .sectionProducts p{
-        width: 60%;
-        font-size: 1.1em;
+@media (min-width: 750px) {
+
+    /* --Header Init-- */
+    header{
+        padding: 0.7%;
+        margin-bottom: 0;
     }
+
+    #line{
+        width: 15px;
+        margin: 2px;
+        border: 2px solid;
+    }
+
+    .logo{
+        font-size: 2.5em;
+    }
+    
+    .navLinks{
+        font-size: 1.3em;
+        gap: 25px;
+    }
+
+    /* --Header End-- */
+
+    .sectionCards{
+        display: flex;
+        height: 93vh;
+    }
+
+    .articleCard{
+        border-radius: 0;
+        animation: none;
+    }
+
+    .articleCard h1{
+        font-size: 3.5em;
+    }
+    .articleCard p{
+        font-size: 2em;
+    }
+
+    .articlePurple{
+        display: flex;
+        padding: 0;
+        padding-left: 15px;
+
+    }
+
+    .articleBlack{
+        display: flex;
+        margin-left: 0;
+        background: black url(../imgs/creditCardBlack.jpg) center center no-repeat;
+        justify-content: space-around;
+    }
+
+    #textCard{
+        width: 50%;
+    }
+
+    #createCard{
+        margin-top: 1%;
+        width: 50%;
+    }
+
+    .articleBlack a{
+        font-size: 2em;
+        transition: 1s;
+    }
+
+    .articleBlack a:hover{
+        padding: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.441);
+        box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.776);
+        border-radius: 20px;
+    }
+
+    #imgCard{
+        display: none;
+    }
+
 }
