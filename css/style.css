@@ -185,6 +185,10 @@ header a{
     padding: 2%;
 }
 
+.textBuyOnlineDesktop{
+    display: none;
+}
+
 .buyOnline{
     display: flex;
 }
@@ -449,6 +453,7 @@ footer a{
         font-weight: bold;
         font-size: 1.8em;
         padding: 1%;
+        display: inline;
     }
 
     .buyOnline{

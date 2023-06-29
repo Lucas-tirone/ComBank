@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@font-face {
+    font-family: "Bronzier";
+    src: url(../fonts/Bronzier-Medium.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color0: #8D46EA;
+    --color1: #6300E5;
+    --color2: #4D00B3;
+    --color3: #3E1F66;
+    --color4: #2C0066;
+
+    --fontTitle: "Ubuntu";
+    --fontNormal: "Poppins";
+    --fontLogo: Bronzier;
+}
+
+body{
+    background-color: white;
+    color: white;
+}
+
+/* --INIT HEADER-- */
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    align-items: center;
+    margin-bottom: 2%;
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+header a{
+    text-decoration: none;
+}
+
+.hamburguer{
+    display: flex;
+    flex-direction: column;
+}
+
+#line{
+    width: 10px;
+    margin: 1px;
+    border: 1px solid var(--color4);
+}
+
+.logo{
+    font-family: var(--fontLogo);
+    font-size: 1.4em;
+}
+
+.logo a{
+    color: var(--color1);
+}
+
+#initialLetter{
+    color: var(--color2);
+}
+
+.navLinks{
+    font-weight: bold;
+    display: flex;
+    gap: 8px;
+    font-family: var(--fontTitle);
+    transition: 1s;
+}
+
+.navLinks a:hover{
+    border-bottom:1px solid var(--color0);
+}
