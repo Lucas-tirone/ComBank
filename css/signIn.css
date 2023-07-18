@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@font-face {
+    font-family: "Bronzier";
+    src: url(../fonts/Bronzier-Medium.ttf);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --color0: #8D46EA;
+    --color1: #6300E5;
+    --color2: #4D00B3;
+    --color3: #3E1F66;
+    --color4: #2C0066;
+
+    --fontTitle: "Ubuntu";
+    --fontNormal: "Poppins";
+    --fontLogo: Bronzier;
+}
+
+header{
+    display: flex;
+    background-color: var(--color2);
+    border-bottom: 1px solid #666;
+    padding: 5px;
+}
+
+.headerLinks{
+    font-family: var(--fontNormal);
+    font-weight: bold;
+    font-size: 1.2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.headerLinks a{
+    text-decoration: none;
+    color: white;
+}
+
+.headerLinks a:hover{
+    color: var(--color4);
+}

@@ -189,6 +189,10 @@ header a{
     display: none;
 }
 
+.btnShopping{
+    display: none;
+}
+
 .buyOnline{
     display: flex;
 }
@@ -452,8 +456,24 @@ footer a{
         font-family: var(--fontNormal);
         font-weight: bold;
         font-size: 1.8em;
-        padding: 1%;
+        padding: 2%;
         display: inline;
+
+    }
+
+    .btnShopping{
+        display: grid;
+        margin: 50% 0 0 30%;
+        border: 2px solid white;
+        text-align: center;
+        border-radius: 20px;
+        padding: 1%;
+    }
+
+    .btnShopping:hover{
+        transition: 1s;
+        box-shadow: 2px 2px 5px rgb(255, 255, 255);
+        cursor: pointer;
     }
 
     .buyOnline{
